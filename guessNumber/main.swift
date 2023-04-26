@@ -11,7 +11,7 @@ var lowestInt = 1
 var highesInt = 100
 
 class Errors{
-    
+
     var errorMsgs: [String] = []
     
     func getErrors() -> [String]{
@@ -94,7 +94,10 @@ class Score{
 
 var fehler = Errors()
 var score = Score(player: 0, computer: 0)
+
+print(startText())
 running()
+
 
 func running(){
     print("Welcome to the guess number game")
@@ -240,6 +243,9 @@ func changeLowest() -> String{
 }
 
 
+/// Overview over errors that accured
+/// - Parameter type: what values should be returnd
+/// - Returns: returns inforamtion about errors and amount of errors
 func test(_ type: Int? = nil) -> String{
    
     var msg: String = ""
@@ -256,4 +262,18 @@ func test(_ type: Int? = nil) -> String{
     return msg
 }
 
+func startText() -> String {
+    
+var text: String = """
+   ▐ ▄ ▄• ▄▌• ▌ ▄ ·. ▄▄▄▄· ▄▄▄ .▄▄▄       ▄▄ •  ▄▄▄· • ▌ ▄ ·. ▄▄▄ .
+  •█▌▐██▪██▌·██ ▐███▪▐█ ▀█▪▀▄.▀·▀▄ █·    ▐█ ▀ ▪▐█ ▀█ ·██ ▐███▪▀▄.▀·
+  ▐█▐▐▌█▌▐█▌▐█ ▌▐▌▐█·▐█▀▀█▄▐▀▀▪▄▐▀▀▄     ▄█ ▀█▄▄█▀▀█ ▐█ ▌▐▌▐█·▐▀▀▪▄
+  ██▐█▌▐█▄█▌██ ██▌▐█▌██▄▪▐█▐█▄▄▌▐█•█▌    ▐█▄▪▐█▐█ ▪▐▌██ ██▌▐█▌▐█▄▄▌
+  ▀▀ █▪ ▀▀▀ ▀▀  █▪▀▀▀·▀▀▀▀  ▀▀▀ .▀  ▀    ·▀▀▀▀  ▀  ▀ ▀▀  █▪▀▀▀ ▀▀▀
 
+©sakulm1 2023
+
+"""
+    return text
+ 
+}
